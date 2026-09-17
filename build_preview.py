@@ -17,7 +17,7 @@ body = markdown.markdown(
 )
 
 template = r'''<!doctype html>
-<html lang="zh-CN" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -53,12 +53,12 @@ body.narrow main{max-width:390px;padding:20px 16px}
 </style>
 </head>
 <body>
-<nav class="toolbar" aria-label="预览显示选项"><span>PROFILE README / LOCAL PREVIEW</span><div class="actions"><button id="theme" type="button" aria-pressed="false">浅色预览</button><button id="width" type="button" aria-pressed="false">窄屏预览</button></div></nav>
+<nav class="toolbar" aria-label="Preview display options"><span>PROFILE README / LOCAL PREVIEW</span><div class="actions"><button id="theme" type="button" aria-pressed="false">Light preview</button><button id="width" type="button" aria-pressed="false">Narrow preview</button></div></nav>
 <main><div class="file-label"><strong>Esen-wyz</strong><span> / README.md</span></div><article class="markdown-body">__BODY__</article></main>
-<p class="footnote">由实际 README 生成 · GitHub 的最终排版以在线页面为准</p>
+<p class="footnote">Generated from README.md. Final rendering is provided by GitHub.</p>
 <script>
-document.querySelector('#theme').addEventListener('click',function(){const light=document.documentElement.dataset.theme!=='light';document.documentElement.dataset.theme=light?'light':'dark';this.textContent=light?'深色预览':'浅色预览';this.setAttribute('aria-pressed',String(light));});
-document.querySelector('#width').addEventListener('click',function(){const narrow=document.body.classList.toggle('narrow');this.textContent=narrow?'宽屏预览':'窄屏预览';this.setAttribute('aria-pressed',String(narrow));});
+document.querySelector('#theme').addEventListener('click',function(){const light=document.documentElement.dataset.theme!=='light';document.documentElement.dataset.theme=light?'light':'dark';this.textContent=light?'Dark preview':'Light preview';this.setAttribute('aria-pressed',String(light));});
+document.querySelector('#width').addEventListener('click',function(){const narrow=document.body.classList.toggle('narrow');this.textContent=narrow?'Wide preview':'Narrow preview';this.setAttribute('aria-pressed',String(narrow));});
 </script>
 </body></html>'''
 
