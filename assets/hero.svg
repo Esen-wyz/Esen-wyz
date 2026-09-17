@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Vision, in motion — ground-to-aerial gait recognition</title>
+  <desc id="desc">从地面到天空，读懂行走的线索。概念示意：地面相机与空中无人机从不同视角观察行走的人，以步态连接地面与空中视觉。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#101c28"/>
+      <stop offset="0.57" stop-color="#0b121a"/>
+      <stop offset="1" stop-color="#13232b"/>
+    </linearGradient>
+    <radialGradient id="airGlow">
+      <stop stop-color="#77e8cc" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#77e8cc" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="airVolume" x1="1" y1="0" x2=".3" y2="1">
+      <stop stop-color="#77e8cc" stop-opacity=".02"/>
+      <stop offset="1" stop-color="#77e8cc" stop-opacity=".10"/>
+    </linearGradient>
+    <linearGradient id="groundVolume" x1="0" y1=".5" x2="1" y2=".5">
+      <stop stop-color="#ffc38c" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#ffc38c" stop-opacity=".015"/>
+    </linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f2f8f7"/>
+      <stop offset="1" stop-color="#b9d1cc"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".7" fill="#7b98a6" opacity=".18"/>
+    </pattern>
+    <marker id="mintArrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 5 3 0 6" fill="none" stroke="#77e8cc" stroke-width="1"/>
+    </marker>
+    <marker id="amberArrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 5 3 0 6" fill="none" stroke="#ffc38c" stroke-width="1"/>
+    </marker>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+      .mono { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
+      .cn { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; }
+      .scan { animation: scan 6s ease-in-out infinite; }
+      .aircraft { animation: hover 6s ease-in-out infinite; }
+      .ghost-still { display: none; }
+      @keyframes scan { 0%,100% { opacity: .2; } 50% { opacity: .85; } }
+      @keyframes hover { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+      @media (prefers-reduced-motion: reduce) {
+        .scan, .aircraft { animation: none; }
+        .ghost-motion { display: none; }
+        .ghost-still { display: inline; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" rx="18" fill="url(#bg)"/>
+  <rect x="610" y="23" width="570" height="465" fill="url(#dots)"/>
+  <ellipse cx="991" cy="239" rx="273" ry="259" fill="url(#airGlow)"/>
+  <path d="M60 45H105" stroke="#77e8cc" stroke-width="3"/>
+  <path d="M110 45H130" stroke="#ffc38c" stroke-width="3"/>
+  <text x="60" y="81" class="mono" font-size="12" letter-spacing="1.2" fill="#a9bdc7">COMPUTER VISION / GROUND ↔ AERIAL GAIT</text>
+
+  <text x="55" y="184" font-size="91" font-weight="750" letter-spacing="-4.7" fill="#eff5f4">VISION,</text>
+  <text x="55" y="278" font-size="91" font-weight="750" letter-spacing="-4.7" fill="#eff5f4">IN MOTION<tspan fill="#77e8cc">.</tspan></text>
+  <text x="61" y="327" class="cn" font-size="21" letter-spacing="1" fill="#c2d4d9">从地面到天空，读懂行走的线索。</text>
+
+  <path d="M61 369H490" stroke="#2d414c"/>
+  <text x="61" y="402" class="mono" font-size="11" letter-spacing="1.8" fill="#6e8997">RESEARCH FOCUS</text>
+  <text x="61" y="430" font-size="16" fill="#e0e9ea">Gait recognition across ground and aerial views</text>
+  <circle cx="66" cy="477" r="3" fill="#77e8cc"/>
+  <text x="79" y="481" class="mono" font-size="11" letter-spacing=".5" fill="#93aab6">SERIOUS RESEARCH. PLAYFUL CURIOSITY.</text>
+
+  <!-- The geometry is an original conceptual illustration, not an experimental result. -->
+  <g fill="none" stroke="#2d4652" stroke-width="1">
+    <path d="M645 382 884 241 1164 322 925 463Z" fill="#10212a" fill-opacity=".5"/>
+    <path d="m693 354 280 81m-232-109 280 81m-232-109 280 81m-232-109 280 81" opacity=".65"/>
+    <path d="m701 398 239-141m-183 157 239-141m-183 157 239-141m-183 157 239-141" opacity=".65"/>
+    <path d="M645 382 925 463 1164 322" stroke="#4a6973" opacity=".7"/>
+  </g>
+  <g fill="#78919c" class="mono" font-size="10" letter-spacing="1.4">
+    <text x="1037" y="422" transform="rotate(-30 1037 422)">GROUND PLANE</text>
+  </g>
+
+  <!-- An airborne camera looks down; the ground camera looks approximately horizontally. -->
+  <path d="M996 129 817 353 938 405 1044 341Z" fill="url(#airVolume)"/>
+  <path d="M996 129 817 353 938 405 1044 341Z" fill="none" stroke="#77e8cc" stroke-opacity=".25"/>
+  <path d="M996 129 938 405" fill="none" stroke="#77e8cc" stroke-opacity=".18"/>
+  <path d="m817 353 109-61 118 49-106 64Z" fill="#77e8cc" fill-opacity=".035" stroke="#77e8cc" stroke-opacity=".32" stroke-dasharray="4 6"/>
+  <path d="M986 143 930 219" stroke="#77e8cc" stroke-opacity=".7" stroke-dasharray="4 5" marker-end="url(#mintArrow)"/>
+
+  <path d="M744 295 903 222 968 381 744 309Z" fill="url(#groundVolume)"/>
+  <path d="M744 295 903 222M744 309 968 381" stroke="#ffc38c" stroke-opacity=".22" fill="none"/>
+  <path d="M757 302H869" stroke="#ffc38c" stroke-opacity=".6" stroke-dasharray="4 5" marker-end="url(#amberArrow)"/>
+
+  <!-- A pair of thin observational orbits gives the image depth without dashboard decoration. -->
+  <ellipse cx="916" cy="285" rx="155" ry="81" transform="rotate(-26 916 285)" fill="none" stroke="#41616c" stroke-opacity=".45" stroke-dasharray="2 8"/>
+  <path d="M801 357c-24-23-8-61 43-97" fill="none" stroke="#77e8cc" stroke-opacity=".7" stroke-width="1.4"/>
+  <circle cx="844" cy="260" r="3" fill="#77e8cc"/>
+  <path d="M1028 211c25 20 13 55-16 83" fill="none" stroke="#ffc38c" stroke-opacity=".55"/>
+  <circle cx="1012" cy="294" r="2.5" fill="#ffc38c"/>
+
+  <!-- A faint gait cycle describes temporal motion, with opposing arm and leg phases. -->
+  <g class="ghost-motion" fill="none" stroke="#77e8cc" stroke-linecap="round" stroke-linejoin="round" opacity=".34">
+    <circle cx="865" cy="236" r="12" stroke-width="2"/>
+    <path d="M865 253 L861 295 L867 319" stroke-width="4"/>
+    <path d="M865 261 L844 291 L825 296" stroke-width="4">
+      <animate attributeName="d" dur="2.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.25;.5;.75;1" keySplines=".37 0 .63 1;.37 0 .63 1;.37 0 .63 1;.37 0 .63 1"
+        values="M865 261 L844 291 L825 296;M865 261 L857 292 L872 307;M865 261 L880 286 L902 294;M865 261 L871 290 L874 310;M865 261 L844 291 L825 296"/>
+    </path>
+    <path d="M865 261 L880 286 L902 294" stroke-width="4">
+      <animate attributeName="d" dur="2.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.25;.5;.75;1" keySplines=".37 0 .63 1;.37 0 .63 1;.37 0 .63 1;.37 0 .63 1"
+        values="M865 261 L880 286 L902 294;M865 261 L871 290 L874 310;M865 261 L844 291 L825 296;M865 261 L857 292 L872 307;M865 261 L880 286 L902 294"/>
+    </path>
+    <path d="M867 319 L845 350 L840 378 M832 379 L847 380" stroke-width="4">
+      <animate attributeName="d" dur="2.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.25;.5;.75;1" keySplines=".37 0 .63 1;.37 0 .63 1;.37 0 .63 1;.37 0 .63 1"
+        values="M867 319 L845 350 L840 378 M832 379 L847 380;M867 319 L859 350 L866 379 M862 379 L875 380;M867 319 L882 346 L906 371 M898 371 L912 374;M867 319 L878 342 L864 360 M861 360 L875 366;M867 319 L845 350 L840 378 M832 379 L847 380"/>
+    </path>
+    <path d="M867 319 L882 346 L906 371 M898 371 L912 374" stroke-width="4">
+      <animate attributeName="d" dur="2.8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.25;.5;.75;1" keySplines=".37 0 .63 1;.37 0 .63 1;.37 0 .63 1;.37 0 .63 1"
+        values="M867 319 L882 346 L906 371 M898 371 L912 374;M867 319 L878 342 L864 360 M861 360 L875 366;M867 319 L845 350 L840 378 M832 379 L847 380;M867 319 L859 350 L866 379 M862 379 L875 380;M867 319 L882 346 L906 371 M898 371 L912 374"/>
+    </path>
+  </g>
+  <!-- Reduced-motion preference replaces the SMIL group with the original static pose. -->
+  <g class="ghost-still" fill="none" stroke="#77e8cc" stroke-linecap="round" stroke-linejoin="round" opacity=".24">
+    <circle cx="865" cy="236" r="12" stroke-width="2"/>
+    <path d="m865 253-4 42 6 24m-4-58-19 30-19 5m39-33 16 25 22 6m-35 26-22 31-5 28m27-58 15 28 24 22" stroke-width="4"/>
+    <path d="m832 379 15 1m51-9 14 3" stroke-width="3"/>
+  </g>
+
+  <ellipse cx="919" cy="390" rx="57" ry="10" fill="#060c12" opacity=".65"/>
+  <ellipse cx="918" cy="390" rx="69" ry="17" fill="none" stroke="#77e8cc" stroke-opacity=".22"/>
+  <path d="M811 415c39-3 68-11 105-28 39-18 77-37 113-54" stroke="#77e8cc" stroke-opacity=".45" fill="none" stroke-dasharray="2 8"/>
+
+  <!-- The central walking figure: readable silhouette with a small skeletal overlay. -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <path d="m911 305-18 42-24 32" fill="none" stroke="#779494" stroke-width="16"/>
+    <path d="m869 379-14 4" fill="none" stroke="#8aa5a4" stroke-width="10"/>
+    <path d="m912 258-19 29-25 7" fill="none" stroke="#96b1ae" stroke-width="11"/>
+    <path d="m914 241-3 15" fill="none" stroke="url(#body)" stroke-width="13"/>
+    <ellipse cx="916" cy="228" rx="13" ry="16" transform="rotate(8 916 228)" fill="url(#body)"/>
+    <path d="M904 251c6-4 17-1 21 7l-1 31-4 25-19-3 1-24-3-22c-1-7 1-11 5-14Z" fill="url(#body)"/>
+    <path d="m918 260 14 28 24 13" fill="none" stroke="#d2e3df" stroke-width="11"/>
+    <path d="m913 309 24 35-5 43" fill="none" stroke="url(#body)" stroke-width="17"/>
+    <path d="m932 387 17 3" fill="none" stroke="#d6e5e1" stroke-width="10"/>
+    <g fill="#11242c" stroke="#77e8cc" stroke-width="1.5">
+      <path d="m915 259-4 49 25 36-4 42m-21-78-17 38-24 33m45-120 17 29 24 13" fill="none" stroke-opacity=".65"/>
+      <circle cx="915" cy="259" r="3"/>
+      <circle cx="911" cy="308" r="3"/>
+      <circle cx="936" cy="344" r="3"/>
+      <circle cx="932" cy="386" r="3"/>
+      <circle cx="894" cy="346" r="2.5"/>
+    </g>
+  </g>
+
+  <!-- Scan line stays within the conceptual subject volume. -->
+  <g class="scan" opacity=".5" fill="none" stroke="#77e8cc">
+    <path d="m867 272 83 23 32-19" stroke-opacity=".5"/>
+    <path d="m866 272 12-7m72 30 12-7" stroke-width="2"/>
+  </g>
+
+  <!-- Ground camera, with a lens facing toward the walking subject. -->
+  <g stroke-linejoin="round">
+    <path d="M718 321v43m0-23-16 35m16-35 18 35" stroke="#8f9184" stroke-width="2" fill="none"/>
+    <path d="m699 290 33-4 11 7v22l-33 4-11-7Z" fill="#23323b" stroke="#d5ad85" stroke-width="1.4"/>
+    <path d="m710 297 33-4m-33 4v22m-11-29 11 7" fill="none" stroke="#d5ad85" stroke-opacity=".6"/>
+    <path d="m743 298 10-1v13l-10 3Z" fill="#ffc38c" fill-opacity=".23" stroke="#ffc38c" stroke-width="1.4"/>
+    <circle cx="705" cy="304" r="2" fill="#ffc38c"/>
+  </g>
+  <path d="M693 305h-24v29" fill="none" stroke="#ffc38c" stroke-opacity=".6"/>
+  <text x="651" y="352" class="mono" font-size="12" letter-spacing="1" fill="#ffc38c">GROUND</text>
+  <text x="651" y="368" class="mono" font-size="10" fill="#809ba7">side view</text>
+
+  <!-- Quadcopter: arm and rotor geometry, with a camera on the underside. -->
+  <g class="aircraft">
+    <g fill="none" stroke="#77e8cc" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m973 96 26 15 34-18m-34 18-26 20m26-20 37 14" stroke="#658f90" stroke-width="5"/>
+      <path d="m973 96 26 15 34-18m-34 18-26 20m26-20 37 14" stroke-width="1"/>
+      <ellipse cx="970" cy="94" rx="24" ry="7" transform="rotate(9 970 94)" stroke-opacity=".8"/>
+      <ellipse cx="1035" cy="91" rx="24" ry="7" transform="rotate(9 1035 91)" stroke-opacity=".8"/>
+      <ellipse cx="971" cy="132" rx="24" ry="7" transform="rotate(9 971 132)" stroke-opacity=".5"/>
+      <ellipse cx="1038" cy="126" rx="24" ry="7" transform="rotate(9 1038 126)" stroke-opacity=".8"/>
+      <path d="m986 104 17-5 15 9-12 12-19-5Z" fill="#1e3c43" stroke-width="1.4"/>
+      <path d="m989 117 2 9 12 4 8-9" stroke-opacity=".7"/>
+      <path d="m993 126 8 2-3 9-8-3Z" fill="#77e8cc" fill-opacity=".23"/>
+      <circle cx="998" cy="109" r="2" fill="#77e8cc" stroke="none"/>
+    </g>
+  </g>
+  <path d="M1069 98h29v30" fill="none" stroke="#77e8cc" stroke-opacity=".6"/>
+  <text x="1063" y="146" class="mono" font-size="12" letter-spacing="1" fill="#77e8cc">AERIAL</text>
+  <text x="1063" y="162" class="mono" font-size="10" fill="#809ba7">oblique view</text>
+
+  <g fill="none" stroke="#66838e" stroke-opacity=".6">
+    <path d="M647 68V56h12M1140 56h12v12M1152 449v12h-12"/>
+  </g>
+  <text x="680" y="61" class="mono" font-size="10" letter-spacing="1.6" fill="#809ba7">ONE MOTION · DIFFERENT PERSPECTIVES</text>
+  <text x="1151" y="486" class="mono" text-anchor="end" font-size="9" letter-spacing="1.2" fill="#6c8794">CONCEPTUAL ILLUSTRATION</text>
+</svg>
