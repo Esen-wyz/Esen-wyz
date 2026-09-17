@@ -30,7 +30,7 @@ Computer Vision · Gait Recognition · Ground–Aerial Matching
 ## 02 / After hours
 
 <p align="center">
-  <img src="./assets/after-hours.svg" width="100%" alt="Serious questions. Playful experiments. 像素小生物、几何玩具与代码光标组成的灵感实验角。" />
+  <img src="./assets/after-hours.svg" width="100%" alt="Serious questions. Playful experiments. 像素小生物与悬浮几何玩具组成的灵感实验角。" />
 </p>
 
 研究之外，我也喜欢折腾视觉、空间和交互：一个突然冒出来的念头，一段让人会心一笑的小程序，或者一个值得亲手试试的“如果”。
